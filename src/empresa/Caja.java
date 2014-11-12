@@ -5,11 +5,9 @@
  */
 package empresa;
 
-import com.toedter.calendar.JDateChooser;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -20,22 +18,8 @@ import javax.swing.JTextField;
  */
 public class Caja extends javax.swing.JFrame {
 
-    //Elementos de Efectivo
     JLabel efe_abono;
     JLabel efe_vuelto;
-     JTextField tf_abono;
-      JTextField tf_vuelto;
-      //Elementos de Tarjeta
-       JLabel t_monto;
-    JLabel t_nombre;
-    JLabel t_tipo;
-    JLabel t_numero;
-     JTextField tf_monto;
-     JComboBox cb_tarjeta;
-     JTextField tf_numero;
-     JComboBox cb_tipo;
-     JDateChooser cale;
-    
      JLabel label2;
      JTextField texto;
      Home home;
@@ -49,78 +33,12 @@ public class Caja extends javax.swing.JFrame {
         initComponents();
         efe_abono = new JLabel("Abono con");
         efe_vuelto =new JLabel("Vuelto");
-        tf_abono =new JTextField();
-        tf_vuelto =new JTextField();
-        efe_abono.setBounds(300, 230, 300, 40);
-        efe_vuelto.setBounds(400, 230, 300, 40);
-        tf_abono.setBounds(280, 260, 100, 30);
-        tf_vuelto.setBounds(380, 260, 100, 30);
-        this.add(efe_abono);
-        efe_abono.setVisible(false);
-        this.add(efe_vuelto);
-        efe_vuelto.setVisible(false);
-        this.add(tf_abono);
-        tf_abono.setVisible(false);
-        this.add(tf_vuelto);
-        tf_vuelto.setVisible(false);
-        
-        
-        t_monto = new JLabel("Monto");
-        t_nombre =new JLabel("Nombre Tarjeta");
-        t_tipo = new JLabel("Tipo Tarjeta");
-        t_numero = new JLabel("Numero Tarjeta");
-        cb_tarjeta =new JComboBox();
-        cb_tipo =new JComboBox();
-        tf_monto =new JTextField(); 
-        tf_numero =new JTextField();
-        t_monto.setBounds(300, 230, 300, 40);
-        t_nombre.setBounds(400, 230, 300, 40);
-        tf_monto.setBounds(280,260 , 100, 30);
-       cb_tarjeta.setBounds(380, 260, 100, 30);
-       cb_tarjeta.addItem("Tarjeta 1");
-       cb_tarjeta.addItem("Tarjeta 2");
-       cb_tarjeta.addItem("Targeta 3");
-       t_tipo.setBounds(300, 290, 300, 40);
-       t_numero.setBounds(400,290,300,40);
-       tf_numero.setBounds(390, 320, 100, 30);
-       cb_tipo.setBounds(280, 320, 100, 30);
-       cb_tipo.addItem("Credito");
-       cb_tipo.addItem("Debito");
-        this.add(t_monto);
-        t_monto.setVisible(false);
-         this.add(t_nombre);
-         t_nombre.setVisible(false);
-          this.add(t_tipo);
-          t_tipo.setVisible(false);
-           this.add(t_numero);
-           t_numero.setVisible(false);
-            this.add(cb_tarjeta);
-            cb_tarjeta.setVisible(false);
-             this.add(cb_tipo);
-             cb_tipo.setVisible(false);
-              this.add(tf_monto);
-              tf_monto.setVisible(false);
-               this.add(tf_numero);
-               tf_numero.setVisible(false);
-       
-       
-       //elementos de cheque
-       cale=new JDateChooser();
-       cale.setBounds(300, 300, 200, 30);
-       this.add(cale);
-      cale.setVisible(false);
-       
-       
-       
-       
-   texto =new JTextField();
+        texto =new JTextField();
+efe_abono.setBounds(300, 230, 300, 40);
+efe_vuelto.setBounds(400, 230, 300, 40);
  label2 = new JLabel("Cuenta Corriente");
 label2.setBounds(300, 230, 300, 40);
 texto.setBounds(350, 230, 200, 30);
-
-
-
-
 this.setTitle("CAJA");
  this.setLocationRelativeTo(null);
     }
@@ -280,36 +198,26 @@ this.setTitle("CAJA");
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(27, 27, 27)
-                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(27, 27, 27)
-                                            .addComponent(Codvoucher, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(65, 65, 65)
-                                            .addComponent(Nboucher1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(Codvoucher1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
-                                .addComponent(Codvoucher2, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(90, 90, 90))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(47, 47, 47)
-                                .addComponent(Nboucher)
-                                .addGap(142, 142, 142)
-                                .addComponent(Nboucher2))
+                                .addGap(27, 27, 27)
+                                .addComponent(Codvoucher, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(40, 40, 40)
-                                .addComponent(Nboucher5)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGap(65, 65, 65)
+                                .addComponent(Nboucher1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Codvoucher1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addComponent(Nboucher)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(51, 51, 51)
+                                .addComponent(Codvoucher2, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(74, 74, 74)
+                                .addComponent(Nboucher2)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -322,6 +230,15 @@ this.setTitle("CAJA");
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(Nboucher4)
                         .addGap(95, 95, 95))))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(Nboucher5)))
+                .addContainerGap(401, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -332,7 +249,7 @@ this.setTitle("CAJA");
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(Nboucher2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(Codvoucher2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(Nboucher1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -355,7 +272,7 @@ this.setTitle("CAJA");
                 .addComponent(Nboucher5)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(176, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         pack();
@@ -413,140 +330,75 @@ JOptionPane.showMessageDialog(null, "Error al extraer datos"+e.toString());
     }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     private void jCheckBox1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox1MouseClicked
-   if(cale.isVisible()){
-    
-       cale.setVisible(false);
- 
+   if(label2.isVisible()){
+     this.remove(label2);
+ label2.setVisible(false);
  this.repaint();
     }
-   if(t_monto.isVisible()){
-   t_monto.setVisible(false);
-t_nombre.setVisible(false);
-tf_monto.setVisible(false);
-cb_tarjeta.setVisible(false);
-
-t_tipo.setVisible(false);
-t_numero.setVisible(false);
-tf_numero.setVisible(false);
-cb_tipo.setVisible(false);
-
-this.repaint();
-   }
-  
-efe_vuelto.setVisible(true);
+       
+this.add(efe_vuelto);
+this.add(efe_abono);
 efe_abono.setVisible(true);
-tf_abono.setVisible(true);
-tf_vuelto.setVisible(true);
-
+efe_vuelto.setVisible(true);
 this.repaint();
         if(jCheckBox1.isSelected()){
             
 }
 else{
 
-  
-efe_vuelto.setVisible(true);
+this.add(efe_vuelto);
+this.add(efe_abono);
 efe_abono.setVisible(true);
-tf_abono.setVisible(true);
-tf_vuelto.setVisible(true);
-
+efe_vuelto.setVisible(true);
 this.repaint();
 } // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1MouseClicked
 
     private void jCheckBox4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox4MouseClicked
     if(efe_abono.isVisible()){
-     
-     efe_abono.setVisible(false);
-     
-     efe_vuelto.setVisible(false);
-     
-     tf_abono.setVisible(false);
-     
-     tf_vuelto.setVisible(false);
-
- this.repaint();
-    }
-     if(t_monto.isVisible()){
-     
-     t_monto.setVisible(false);
-     t_nombre.setVisible(false);
-     t_numero.setVisible(false);
-     t_tipo.setVisible(false);
-     
-    
-     tf_monto.setVisible(false);
-     tf_numero.setVisible(false);
-     cb_tarjeta.setVisible(false);
-     cb_tipo.setVisible(false);
-     
-
+     this.remove(efe_abono);
+ efe_abono.setVisible(false);
  this.repaint();
     }
        
 
-
-cale.setVisible(true);
-this.repaint();
+this.add(label2);
+label2.setVisible(true);
 this.repaint();
         if(jCheckBox4.isSelected()){
             
 }
 else{
 
-
-cale.setVisible(true);
-this.repaint();
+this.add(label2);
+label2.setVisible(true);
 this.repaint();
 }    // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox4MouseClicked
 
     private void jCheckBox2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox2MouseClicked
          if(efe_abono.isVisible()){
-     
-     efe_abono.setVisible(false);
-     
-     efe_vuelto.setVisible(false);
-     
-     tf_abono.setVisible(false);
-     
-     tf_vuelto.setVisible(false);
-
+     this.remove(efe_abono);
+ efe_abono.setVisible(false);
  this.repaint();
     }
-          if(cale.isVisible()){
-              cale.setVisible(false);
- 
+          if(label2.isVisible()){
+     this.remove(label2);
+ efe_abono.setVisible(false);
  this.repaint();
     }
-t_monto.setVisible(true);
-t_nombre.setVisible(true);
-tf_monto.setVisible(true);
-cb_tarjeta.setVisible(true);
+       
 
-
-t_tipo.setVisible(true);
-t_numero.setVisible(true);
-tf_numero.setVisible(true);
-cb_tipo.setVisible(true);
-
-
+this.add(texto);
+texto.setVisible(true);
 this.repaint();
         if(jCheckBox2.isSelected()){
             
 }
 else{
 
-t_monto.setVisible(true);
-t_nombre.setVisible(true);
-tf_monto.setVisible(true);
-cb_tarjeta.setVisible(true);
-
-
-t_tipo.setVisible(true);
-t_numero.setVisible(true);
-tf_numero.setVisible(true);
-cb_tipo.setVisible(true);
+this.add(texto);
+texto.setVisible(true);
 this.repaint();
 } // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox2MouseClicked

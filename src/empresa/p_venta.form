@@ -449,6 +449,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="total_tf">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="print_b">
       <Properties>

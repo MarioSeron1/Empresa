@@ -12,15 +12,13 @@ import javax.swing.JOptionPane;
  * @author Totaldo
  */
 public class Empresa {
- static Login login;
- static Caja caja;
+ static p_venta pventa;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//      caja=new Caja("admin");
-//      caja.setVisible(true);
-    login=new Login();
-    login.setVisible(true);
+      
+//       pventa=new p_venta();
+//       pventa.setVisible(true);
     }
 }

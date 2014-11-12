@@ -67,6 +67,7 @@ JOptionPane.showMessageDialog(null, "Error al extraer datos"+e.toString());
         JOptionPane.showMessageDialog(null, "Error al actualizar datos"+e.toString());
         }
          this.setLocationRelativeTo(null);
+         this.setTitle("VENTAS");
     }
 
     /**
@@ -344,6 +345,8 @@ JOptionPane.showMessageDialog(null, "Error al extraer datos"+e.toString());
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setText("TOTAL:");
+
+        total_tf.setEditable(false);
 
         print_b.setText("Imprimir");
         print_b.addActionListener(new java.awt.event.ActionListener() {
