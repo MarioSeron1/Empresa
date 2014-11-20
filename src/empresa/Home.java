@@ -28,11 +28,9 @@ static String perm;
         icon=Toolkit.getDefaultToolkit().createImage("src/empresa/pv_new.jpg");
 
         initComponents();
-                pv_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\pv.jpg"))); 
-        caja_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\caja.jpg")));
-        admin_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\admin.png")));
-        nc_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\nc.jpg")));
-        nd_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\nc.jpg")));
+               
+        
+        
         if(perm.equals("vendedor")){
             caja_button.setEnabled(false);
         admin_button.setEnabled(false);
@@ -75,9 +73,9 @@ static String perm;
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setMaximumSize(new java.awt.Dimension(250000000, 250000000));
 
-        caja_button.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        caja_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/empresa/caja.png"))); // NOI18N
+        caja_button.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         caja_button.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 caja_buttonMouseClicked(evt);
@@ -95,7 +93,8 @@ static String perm;
             }
         });
 
-        pv_button.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        pv_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/empresa/user_computer.png"))); // NOI18N
+        pv_button.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         pv_button.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pv_buttonMouseClicked(evt);
@@ -113,7 +112,8 @@ static String perm;
             }
         });
 
-        admin_button.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        admin_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/empresa/activity_monitor.png"))); // NOI18N
+        admin_button.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         admin_button.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 admin_buttonMouseClicked(evt);
@@ -141,7 +141,7 @@ static String perm;
             }
         });
 
-        nd_button.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        nd_button.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         nd_button.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 nd_buttonMouseEntered(evt);
@@ -151,10 +151,13 @@ static String perm;
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         jLabel1.setText("Caja");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         jLabel2.setText("        Punto de Venta");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         jLabel3.setText("    Administración");
 
         jLabel4.setText("    Nota de credito");
@@ -162,7 +165,7 @@ static String perm;
         jLabel5.setText("   Nota de debito");
 
         jButton1.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
-        jButton1.setText("SALIR");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/empresa/application_exit (1).png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -174,85 +177,83 @@ static String perm;
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(caja_button, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(123, 123, 123)
+                        .addComponent(pv_button, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(123, 123, 123)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1))
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(admin_button, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(43, 43, 43))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(115, 115, 115)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(nc_button, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(nd_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE))
-                        .addGap(69, 69, 69))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(65, 65, 65)
-                                .addComponent(jLabel1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(38, 38, 38)
-                                .addComponent(caja_button, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(nc_button, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pv_button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(73, 73, 73)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(admin_button, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(56, 56, 56))
+                        .addComponent(nd_button, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(172, 172, 172)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(201, 201, 201))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(caja_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pv_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(admin_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel1))
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(pv_button, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(caja_button, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(admin_button, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 40, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nd_button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(nd_button, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(nc_button, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addComponent(jButton1)
-                .addGap(30, 30, 30))
+                .addGap(28, 28, 28)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void pv_buttonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pv_buttonMouseEntered
-pv_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\pv_new.jpg")));       // TODO add your handling code here:
+//pv_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\pv_new.jpg")));       // TODO add your handling code here:
     }//GEN-LAST:event_pv_buttonMouseEntered
 
     private void pv_buttonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pv_buttonMouseExited
-      pv_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\pv.jpg")));  // TODO add your handling code here:
+//      pv_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\pv.jpg")));  // TODO add your handling code here:
     }//GEN-LAST:event_pv_buttonMouseExited
 
     private void caja_buttonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_caja_buttonMouseEntered
-caja_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\caja_new.jpg")));        // TODO add your handling code here:
+//caja_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\caja_new.jpg")));        // TODO add your handling code here:
     }//GEN-LAST:event_caja_buttonMouseEntered
 
     private void caja_buttonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_caja_buttonMouseExited
-      caja_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\caja.jpg")));  // TODO add your handling code here:
+//      caja_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\caja.jpg")));  // TODO add your handling code here:
     }//GEN-LAST:event_caja_buttonMouseExited
 
     private void caja_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_caja_buttonMouseClicked
@@ -265,11 +266,11 @@ caja_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\caja_new
     }//GEN-LAST:event_pv_buttonMouseClicked
 
     private void admin_buttonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_admin_buttonMouseEntered
-      admin_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\admin_new.png")));  // TODO add your handling code here:
+//      admin_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\admin_new.png")));  // TODO add your handling code here:
     }//GEN-LAST:event_admin_buttonMouseEntered
 
     private void admin_buttonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_admin_buttonMouseExited
-      admin_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\admin.png")));  // TODO add your handling code here:
+//      admin_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\admin.png")));  // TODO add your handling code here:
     }//GEN-LAST:event_admin_buttonMouseExited
 
     private void admin_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_admin_buttonMouseClicked
@@ -277,7 +278,8 @@ caja_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\caja_new
     }//GEN-LAST:event_admin_buttonMouseClicked
 
     private void admin_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_admin_buttonActionPerformed
-        admin_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\admin.png")));
+//        admin_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\admin.png")));
+        
        admin= new Administracion();
      admin.setVisible(true);
       do{
@@ -290,7 +292,7 @@ caja_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\caja_new
     }//GEN-LAST:event_admin_buttonActionPerformed
 
     private void caja_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caja_buttonActionPerformed
-      caja_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\caja.jpg")));
+//      caja_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\caja.jpg")));
      caja= new Caja(perm);
      caja.setVisible(true);
      do{
@@ -303,7 +305,7 @@ caja_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\caja_new
     }//GEN-LAST:event_caja_buttonActionPerformed
 
     private void pv_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pv_buttonActionPerformed
-        pv_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\pv.jpg")));
+//        pv_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\pv.jpg")));
       punto=new p_venta(perm);
       punto.setVisible(true);
     do{
@@ -315,19 +317,19 @@ caja_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\caja_new
     }//GEN-LAST:event_pv_buttonActionPerformed
 
     private void nc_buttonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nc_buttonMouseEntered
-       nc_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\nc_new.jpg"))); // TODO add your handling code here:
+//       nc_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\nc_new.jpg"))); // TODO add your handling code here:
     }//GEN-LAST:event_nc_buttonMouseEntered
 
     private void nc_buttonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nc_buttonMouseExited
-       nc_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\nc.jpg"))); // TODO add your handling code here:
+//       nc_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\nc.jpg"))); // TODO add your handling code here:
     }//GEN-LAST:event_nc_buttonMouseExited
 
     private void nd_buttonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nd_buttonMouseEntered
-       nd_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\nc_new.jpg"))); // TODO add your handling code here:
+//       nd_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\nc_new.jpg"))); // TODO add your handling code here:
     }//GEN-LAST:event_nd_buttonMouseEntered
 
     private void nd_buttonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nd_buttonMouseExited
-      nd_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\nc.jpg")));  // TODO add your handling code here:
+//      nd_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("\\nc.jpg")));  // TODO add your handling code here:
     }//GEN-LAST:event_nd_buttonMouseExited
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
